@@ -1,0 +1,12 @@
+# secrets / env (never commit)
+.env
+*.env
+!app.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
