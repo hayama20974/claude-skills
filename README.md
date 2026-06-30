@@ -12,6 +12,7 @@
 ## What it does / 何をするか
 
 `app-launch-kit` は、リリース素材5点を **アイコン → LP → フィーチャーグラフィック → ストア文章 → プライバシーポリシー** の順で制作します。
+`app-launch-neo-kit` は、同じ成果物を維持しつつ、説明文・共通ルール・重複読み込みを整理した省トークン版です。
 
 ```
 ①アイコン ──→ ②LP ──→ ③グラフィック ──→ ④ストア文章 ──→ ⑤ポリシー ──→ 公開
@@ -35,9 +36,11 @@ Claude Code のスキルとして読み込みます。
 ```bash
 git clone https://github.com/hayama20974/claude-skills.git
 cp -r claude-skills/skills/app-launch-kit ~/.claude/skills/
+# 省トークン版を使う場合
+cp -r claude-skills/skills/app-launch-neo-kit ~/.claude/skills/
 ```
 
-これで [`skills/app-launch-kit/SKILL.md`](skills/app-launch-kit/SKILL.md) が `~/.claude/skills/app-launch-kit/SKILL.md` に入ります。あとは「アプリのリリース素材を作って」「アイコンを作って」のように話しかければ発火します。
+これで [`skills/app-launch-kit/SKILL.md`](skills/app-launch-kit/SKILL.md) または [`skills/app-launch-neo-kit/SKILL.md`](skills/app-launch-neo-kit/SKILL.md) が `~/.claude/skills/` に入ります。あとは「アプリのリリース素材を作って」「アイコンを作って」のように話しかければ発火します。
 
 ## Configure / 自分の環境に合わせる
 
@@ -57,7 +60,10 @@ cp -r claude-skills/skills/app-launch-kit ~/.claude/skills/
 
 ## 解説記事 / Article
 
-設計の背景と使い方は、開発ブログで解説しています → **[AIバイブコーディングTips](https://www.meclgg.com/aitips/)**
+設計の背景と使い方は、開発ブログで解説しています。
+
+- 初版: [アプリのリリース素材5点を、AIに一気通貫で出荷させる手法](https://www.meclgg.com/aitips/Art1/article.html)
+- 省トークン版: [自作スキルは「適切なトークン量」に設計されていない](https://www.meclgg.com/aitips/Art2/article.html)
 
 ## License
 
